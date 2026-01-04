@@ -64,3 +64,19 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 - dispatcher: Customer confirmed. Notifying courier1
 - courier1: Delivery confirmed. Heading to destination...
 
+---
+
+## Sample Output (example)
+
+- scr/
+    - agents/
+        - CustomerAgent.java   # Sends delivery request with package info + confirms the offer with console input
+        - CourierAgent.java    # Calculates and sends delivery offers (price & time) in response to requests
+        - DispatcherAgent.java    # Coordinates communication: forwards request, collects offers, asks for confirmation
+    - ontology/
+        - DeliveryRequest.java    # Ontology class defining fields for a delivery request (packageId, destination, etc.)
+        - DeliveryOffer.java    # Ontology class defining a courier's offer (price, estimated time, courier name)
+        - ConfirmationRequest.java    # Ontology class used by dispatcher to ask the customer for confirmation
+        - ConfirmationResponse.java    # Ontology class for customer's reply to the confirmation request (yes/no)
+        - DeliveryOntology.java    # Registers all ontology classes with JADE for structured agent communication
+      
