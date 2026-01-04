@@ -1,1 +1,65 @@
-# SmartDeliverySystem---Intelligent-Agents
+# Smart Delivery System (Agent-Based Simulation using JADE)
+
+This project focuses on an intelligent, multi-agent delivery coordination system simulating real-world logistics, built with the JADE framework in Java.
+
+---
+
+## Project Overview
+
+**Smart Delivery System** models a smart logistics environment where intelligent agents interact autonomously to facilitate package delivery. It simulates real-time negotiation between customers, couriers, and a dispatcher to choose the most optimal delivery path based on price, distance, and urgency.
+
+The project was developed to explore **Agent-Oriented Programming (AOP)** using **JADE (Java Agent DEvelopment)** framework — very common used in multi-agent research and real-time distributed systems.
+
+---
+
+## Agent Architecture
+
+The system consists of three agent types:
+
+- **CustomerAgent** – Requests a delivery, specifies package details, and confirms offers.
+- **CourierAgent(s)** – Respond with price & time quotes based on the delivery request.
+- **DispatcherAgent** – Acts as a coordinator: forwards requests, collects offers, picks the best, and manages confirmation flow.
+
+Multiple courier agents can be deployed dynamically to simulate market competition (via JADE Graphical User Interface)
+
+---
+
+## Communication Flow
+
+1. **Customer** sends a delivery request: package ID, destination, weight, distance, urgency.
+2. **Dispatcher** receives the request and forwards it to all available *Courier agents*.
+3. **Couriers** respond with dynamically generated offers (price + estimated time).
+4. **Dispatcher** evaluates and sends the *best offer* back to the customer.
+5. *Customer* confirms or rejects the offer (with live console interaction).
+6. On confirmation, the *Dispatcher* notifies the selected *Courier* to proceed.
+
+> Features console-based confirmation input for user, with validation loop (`Yes/No`).
+> Includes realistic price/time calculation logic using urgency, weight, and distance.
+
+---
+
+## Technologies Used
+
+- **Java** = Core language for logic and agents
+- **JADE** = Agent-based framework (Java Agent DEvelopment)
+- **Eclipse** = IDE for coding and support
+- **ACL Messages** = Agent Communication Language
+
+---
+
+## Sample Output (example)
+
+(First, let's create on JADE GUI an `agents.customer` agent, with `name = Luca` and for `arguments = 'P1 Center 5 20'` (arguments explained also in `Usage`)
+Luca: Sending delivery request for package P1, to destination 'Center', with a weight of 5.0 kg and distance of 20.0 km...
+CustomerAgent: Delivery request sent.
+dispatcher: Forwarding request to couriers...
+courier1: Sent offer -> Price: 37.28 | Time: 2h
+courier2: Sent offer -> Price: 39.55 | Time: 3h
+dispatcher: Sent best offer to Luca
+dispatcher: Asking customer for confirmation...
+CustomerAgent: Received best offer from courier1 -> Price: 37.28 | Time: 2h
+Do you confirm the delivery? (Yes/No): Yes
+CustomerAgent: Sent confirmation: YES
+dispatcher: Customer confirmed. Notifying courier1
+courier1: Delivery confirmed. Heading to destination...
+
