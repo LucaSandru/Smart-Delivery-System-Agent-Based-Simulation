@@ -50,16 +50,17 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 ## Sample Output (example)
 
 (First, let's create on JADE GUI an `agents.customer` agent, with `name = Luca` and for `arguments = 'P1 Center 5 20'` (arguments explained also in `Usage`)
-Luca: Sending delivery request for package P1, to destination 'Center', with a weight of 5.0 kg and distance of 20.0 km...
-CustomerAgent: Delivery request sent.
-dispatcher: Forwarding request to couriers...
-courier1: Sent offer -> Price: 37.28 | Time: 2h
-courier2: Sent offer -> Price: 39.55 | Time: 3h
-dispatcher: Sent best offer to Luca
-dispatcher: Asking customer for confirmation...
-CustomerAgent: Received best offer from courier1 -> Price: 37.28 | Time: 2h
-Do you confirm the delivery? (Yes/No): Yes
-CustomerAgent: Sent confirmation: YES
-dispatcher: Customer confirmed. Notifying courier1
-courier1: Delivery confirmed. Heading to destination...
+
+- Luca: Sending delivery request for package P1, to destination 'Center', with a weight of 5.0 kg and distance of 20.0 km...
+- CustomerAgent: Delivery request sent.
+- dispatcher: Forwarding request to couriers...
+- courier1: Sent offer -> Price: 37.28 | Time: 2h
+- courier2: Sent offer -> Price: 39.55 | Time: 3h
+- dispatcher: Sent best offer to Luca
+- dispatcher: Asking customer for confirmation...
+- CustomerAgent: Received best offer from courier1 -> Price: 37.28 | Time: 2h
+- Do you confirm the delivery? (Yes/No): Yes
+- CustomerAgent: Sent confirmation: YES
+- dispatcher: Customer confirmed. Notifying courier1
+- courier1: Delivery confirmed. Heading to destination...
 
