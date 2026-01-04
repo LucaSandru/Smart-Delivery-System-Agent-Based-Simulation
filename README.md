@@ -68,7 +68,7 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 
 ## Sample Output (example)
 
-- scr/
+- src/
     - agents/
         - CustomerAgent.java   &rarr; Sends delivery request with package info + confirms the offer with console input
         - CourierAgent.java    &rarr; Calculates and sends delivery offers (price & time) in response to requests
