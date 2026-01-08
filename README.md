@@ -50,7 +50,8 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 4. **Start the JADE platform with GUI**
    From terminal or IDE configuration:
    ```bash
-   java -cp jade.jar jade.Boot -gui ```
+   java -cp jade.jar jade.Boot -gui
+   ```
 
 5. **Create agents from the JADE GUI**
    The system automatically starts: (shown also in Main-Container GUI)
@@ -60,7 +61,7 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 From the GUI, user only need to manually create the **customer agent**: (there is a `Usage` printed in the console)
 - *Name:* any (e.g. `Luca`)
 - *Class:* `agents.CustomerAgent` - has to be chosen from the list of classes
-- *Arguments:* Package1 Center 5 20 (High), where:
+- *Arguments:* `Package1 Center 5 20 (High)`, where:
     - `Package1` = package ID, `Center` = destination, `5` = weight in kg, `20` = distance in km, `High` = urgency level - optional)
 
 Note on **urgency level**:
