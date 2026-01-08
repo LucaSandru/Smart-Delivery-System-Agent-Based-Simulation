@@ -24,6 +24,50 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 
 ---
 
+## Installation Instructions
+
+### Prerequisites
+
+- Java JDK 8 or higher  
+- Eclipse or IntelliJ IDEA 
+- JADE Framework (Java Agent DEvelopment Framework) 
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/smart-delivery-system.git
+
+2. **Open the project in your IDE**
+   Import the project as a *Java Project* On IntelliJ or Eclipse
+
+3. **Add the JADE library**
+   - Download `jade.jar` from: [https://jade.tilab.com/]
+   - In your IDE, add to the project's *Java Build Path* &rarr; *Libraries* &rarr; *Classpath*
+   - The *JADE* platform will start, showing the GUI.
+
+4. **Start the JADE platform with GUI**
+   From terminal or IDE configuration:
+   ```bash
+   java -cp jade.jar jade.Boot -gui ```
+
+5. **Create agents from the JADE GUI**
+   The system automatically starts: (shown also in Main-Container GUI)
+- `dispatcher` agent
+- `courier1` and `courier2` agents
+
+From the GUI, user only need to manually create the `customer agent`: (there is a `Usage` printed in the console)
+- *Name:* any (e.g. `Luca`)
+- *Class:* `agents.CustomerAgent` - has to be chosen from list
+- *Arguments:* Package1 Center 5 20 (High), where:
+    - `Package1` = package ID, `Center` = destination, `5` = weight in kg, `20` = distance in km, `High` = urgency level - optional)
+
+
+  
+   
+---
+
 ## Communication Flow
 
 1. **Customer** sends a delivery request: package ID, destination, weight, distance, urgency.
