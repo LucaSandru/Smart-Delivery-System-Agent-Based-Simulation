@@ -57,15 +57,12 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 - `dispatcher` agent
 - `courier1` and `courier2` agents
 
-From the GUI, user only need to manually create the `customer agent`: (there is a `Usage` printed in the console)
+From the GUI, user only need to manually create the *customer agent*: (there is a `Usage` printed in the console)
 - *Name:* any (e.g. `Luca`)
-- *Class:* `agents.CustomerAgent` - has to be chosen from list
+- *Class:* `agents.CustomerAgent` - has to be chosen from the list of classes
 - *Arguments:* Package1 Center 5 20 (High), where:
     - `Package1` = package ID, `Center` = destination, `5` = weight in kg, `20` = distance in km, `High` = urgency level - optional)
 
-
-  
-   
 ---
 
 ## Communication Flow
