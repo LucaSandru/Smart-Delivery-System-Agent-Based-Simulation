@@ -66,7 +66,7 @@ Multiple courier agents can be deployed dynamically to simulate market competiti
 
 ---
 
-## Sample Output (example)
+## Project architecture
 
 - src/
     - agents/
